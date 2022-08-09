@@ -1,0 +1,815 @@
+{
+	"info": {
+		"_postman_id": "64c2a594-6d41-4068-9bc6-cf6a08a40bbf",
+		"name": "Laravel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13708013"
+	},
+	"item": [
+		{
+			"name": "Mahasiswa",
+			"item": [
+				{
+					"name": "Get All Mahasiswa",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama\": \"Example Mahasiswa\",\r\n    \"alamat\": \"Malang\",\r\n    \"email\": \"example@mail.com\",\r\n    \"no_hp\": \"08123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/mahasiswa",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"mahasiswa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Mahasiswa",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.code === 200){\r",
+									"    pm.environment.set('id_mahasiswa', pm.response.json().data.id)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama\": \"Example Mahasiswa\",\r\n    \"alamat\": \"Malang\",\r\n    \"email\": \"example@mail.com\",\r\n    \"no_hp\": \"08123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/mahasiswa",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"mahasiswa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Mahasiswa By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama\": \"Example Mahasiswa\",\r\n    \"alamat\": \"Malang\",\r\n    \"email\": \"example@mail.com\",\r\n    \"no_hp\": \"08123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/mahasiswa/{{id_mahasiswa}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"mahasiswa",
+								"{{id_mahasiswa}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Mahasiswa",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama\": \"Example Mahasiswa Edited\",\r\n    \"alamat\": \"Lombok\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/mahasiswa/{{id_mahasiswa}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"mahasiswa",
+								"{{id_mahasiswa}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Mahasiswa",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.code === 200){\r",
+									"    pm.environment.set('id_mahasiswa', pm.response.json().data.id)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/mahasiswa/{{id_mahasiswa}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"mahasiswa",
+								"{{id_mahasiswa}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Matakuliah",
+			"item": [
+				{
+					"name": "Get All Matakuliah",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama\": \"Example Mahasiswa\",\r\n    \"alamat\": \"Malang\",\r\n    \"email\": \"example@mail.com\",\r\n    \"no_hp\": \"08123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/matakuliah",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"matakuliah"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Matakuliah",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.code === 200){\r",
+									"    pm.environment.set('id_matakuliah', pm.response.json().data.id)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matakuliah\": \"Example Matakuliah\",\r\n    \"sks\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/matakuliah",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"matakuliah"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Matakuliah By Id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama\": \"Example Mahasiswa\",\r\n    \"alamat\": \"Malang\",\r\n    \"email\": \"example@mail.com\",\r\n    \"no_hp\": \"08123456789\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/matakuliah/{{id_matakuliah}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"matakuliah",
+								"{{id_matakuliah}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Matakuliah",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matakuliah\": \"Example Matakuliah Edited\",\r\n    \"sks\": 8\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/matakuliah/{{id_matakuliah}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"matakuliah",
+								"{{id_matakuliah}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Matakuliah",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if(pm.response.code === 200){\r",
+									"    pm.environment.set('id_mahasiswa', pm.response.json().data.id)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/matakuliah/{{id_matakuliah}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"matakuliah",
+								"{{id_matakuliah}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Absen",
+			"item": [
+				{
+					"name": "Get All Absen",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/absen",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"absen"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Absen",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mahasiswa_id\": {{id_mahasiswa}},\r\n    \"matakuliah_id\": {{id_matakuliah}},\r\n    \"keterangan\": \"tidak hadir\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/absen",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"absen"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Semester",
+			"item": [
+				{
+					"name": "Get All Semeter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/semester",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"semester"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Semester",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (pm.response.code == 200) {\r",
+									"    pm.environment.set('id_semester', pm.response.json().data.id)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"semester\" : 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/semester",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"semester"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Semester By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/semester/{{id_semester}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"semester",
+								"{{id_semester}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Semester",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"semester\": 4\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/semester/{{id_semester}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"semester",
+								"{{id_semester}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Semester",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/semester/{{id_semester}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"semester",
+								"{{id_semester}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Kontrak",
+			"item": [
+				{
+					"name": "Get All Kontrak",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/kontrak",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"kontrak"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Kontrak",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (pm.response.code == 200) {\r",
+									"    pm.environment.set('id_kontrak', pm.response.json().data.id)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mahasiswa_id\": {{id_mahasiswa}},\r\n    \"semester_id\": {{id_semester}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/kontrak",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"kontrak"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Kontrak",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"mahasiswa_id\": {{id_mahasiswa}},\r\n    \"semester_id\": {{id_semester}}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/kontrak/{{id_kontrak}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"kontrak",
+								"{{id_kontrak}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Kontrak",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/kontrak/{{id_kontrak}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"kontrak",
+								"{{id_kontrak}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Jadwal",
+			"item": [
+				{
+					"name": "Get All Jadwal",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/jadwal",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"jadwal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add Jadwal",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"if (pm.response.code == 200) {\r",
+									"    pm.environment.set('id_jadwal', pm.response.json().data.id)\r",
+									"}"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matakuliah_id\": {{id_matakuliah}},\r\n    \"jadwal\": \"2022-08-07 16:21:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/jadwal",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"jadwal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Jadwal By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/jadwal/{{id_jadwal}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"jadwal",
+								"{{id_jadwal}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Edit Jadwal",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"matakuliah_id\": {{id_matakuliah}},\r\n    \"jadwal\": \"2022-08-07 16:22:00\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{host}}/api/jadwal/{{id_jadwal}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"jadwal",
+								"{{id_jadwal}}"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Jadwal",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{host}}/api/jadwal/{{id_jadwal}}",
+							"host": [
+								"{{host}}"
+							],
+							"path": [
+								"api",
+								"jadwal",
+								"{{id_jadwal}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
